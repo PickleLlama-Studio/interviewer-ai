@@ -1,0 +1,13 @@
+version: '3'
+services:
+  codeflo-interview:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:8000"
+    networks:
+      - codeflo-interview-network
+networks:
+  codeflo-interview-network:
+    name: codeflo-interview-network
